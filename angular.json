@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rxjs-takeAndConcatMapExcercise": {
+    "rxjs-catalog": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rxjs-take-and-concat-map-excercise",
+            "outputPath": "dist/rxjs-catalog",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rxjs-takeAndConcatMapExcercise:build:production"
+              "browserTarget": "rxjs-catalog:build:production"
             },
             "development": {
-              "browserTarget": "rxjs-takeAndConcatMapExcercise:build:development"
+              "browserTarget": "rxjs-catalog:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rxjs-takeAndConcatMapExcercise:build"
+            "browserTarget": "rxjs-catalog:build"
           }
         },
         "test": {
@@ -109,5 +109,5 @@
       }
     }
   },
-  "defaultProject": "rxjs-takeAndConcatMapExcercise"
+  "defaultProject": "rxjs-catalog"
 }

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/rxjs-take-and-concat-map-excercise'),
+      dir: require('path').join(__dirname, './coverage/rxjs-catalog'),
       subdir: '.',
       reporters: [
         { type: 'html' },
