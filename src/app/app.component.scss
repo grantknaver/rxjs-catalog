@@ -1,0 +1,16 @@
+#container {
+    display: flex;
+
+    #equations {
+        width: 50%;
+    }
+
+    #operators {
+        width: 50%;
+    }
+
+    .card {
+        margin: 10px;
+    }
+}
+

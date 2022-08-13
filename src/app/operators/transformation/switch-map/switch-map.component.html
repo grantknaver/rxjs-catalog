@@ -1,0 +1,45 @@
+<h1>SwitchMap</h1>
+<div id="container">
+  <div [formGroup]="switchMapForm">
+    <div>
+      <label for="intervalNumber">Number Of Intervals</label> :
+      <input
+        formControlName="intervals"
+        type="number"
+        id="intervalNumber"
+        type="number"
+        min="1"
+        max="5"
+      />
+    </div>
+    <br>
+    <div>
+      <label for="emissionsNumber">Number Of Emmissions</label> :
+      <input
+        formControlName="emissions"
+        type="number"
+        id="emissionsNumber"
+        type="number"
+        min="1"
+        max="5"
+      />
+    </div>
+    <br>
+    <button mat-raised-button color="accent" (click)="useSwitchMap()">Calculate</button>
+  </div>
+  <br>
+  <div id="output">
+    <ul>
+      <li *ngFor="let output of (switchMapOutput$ | async)">
+      {{output.split('|')[0]}} 
+      {{output.split('|')[0].split('')[0] === 'C' ? '' : '|'}}
+      <span class="emissions">{{output.split('|')[1]}}</span>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <p>Output Key: <span class="emissions">Emissions</span></p>
+  <div id="code">
+  </div>
+</div>
+
