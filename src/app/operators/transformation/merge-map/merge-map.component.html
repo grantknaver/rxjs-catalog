@@ -1,5 +1,21 @@
-<h1>MergeMap</h1>
 <div id="container">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2>MergeMap</h2>
+        </mat-panel-title>
+        <mat-panel-description>
+         Example Code
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div id="code">
+        <app-code-display [tsCode2Display]="tsCodeStr"></app-code-display>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
   <div [formGroup]="mergeMapForm">
     <mat-form-field class="inputFields" appearance="fill">
       <mat-label for="intervalNumber">Number Of Intervals</mat-label>
@@ -26,20 +42,34 @@
     </mat-form-field>
     <br>
     <button mat-raised-button color="accent" (click)="useMergeMap()">Calculate</button>
-  </div>
-  <br>
-  <div id="output">
-    <ul>
-      <li *ngFor="let output of (mergeMapOutput$ | async)">
-      {{output.split('|')[0]}} 
-      {{output.split('|')[0].split('')[0] === 'C' ? '' : '|'}}
-      <span class="emissions">{{output.split('|')[1]}}</span>
-      </li>
-    </ul>
-  </div>
-  <br>
-  <p>Output Key: <span class="emissions">Emissions</span></p>
-  <div id="code">
-  </div>
+  </div> 
+  <br> 
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2 style="text-align: center;">Example Output</h2>
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div id="output">
+        <ng-container *ngIf="mergeMapOutput$ | async; else noOutput">
+          <ul>
+            <li *ngFor="let output of (mergeMapOutput$ | async)">
+            {{output.split('|')[0]}} 
+            {{output.split('|')[0].split('')[0] === 'C' ? '' : '|'}}
+            <span class="emissions">{{output.split('|')[1]}}</span>
+            </li>
+          </ul>
+        </ng-container>
+        <ng-template #noOutput>
+          <p id="noOutputText">No Output Yet!</p>
+        </ng-template>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <!-- <p>Output Key: <span class="emissions">Emissions</span></p> -->
 </div>
 
