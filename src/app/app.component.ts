@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.placeholder.clear();
-    this.placeholder.createComponent(SwitchMapComponent);
+    this.placeholder.createComponent(MergeMapComponent);
   }
 
 }

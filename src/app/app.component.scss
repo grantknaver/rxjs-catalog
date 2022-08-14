@@ -1,16 +1,36 @@
+
 #container {
     display: flex;
+    padding: 10px;
+    min-height: calc(100% - 20px);
 
     #equations {
-        width: 50%;
+        width: calc(50% - .5%);
+        margin-right: .5%;
     }
 
-    #operators {
-        width: 50%;
+    #rxjs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc(50% - .5%);
+
+        #operators {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 10%;
+        }
+
+        img {
+            height: auto;
+            width: 100%;
+        }
     }
 
-    .card {
-        margin: 10px;
-    }
+
+
+
 }
 

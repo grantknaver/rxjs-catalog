@@ -1,8 +1,11 @@
 <div id="container">
-  <mat-card id="equations" class="card">
+  <mat-card id="equations">
     <ng-container #placeholder></ng-container>
   </mat-card>
-  <mat-card  id="operators" class="card">
-    <app-operator-menu></app-operator-menu>
-  </mat-card>
+  <div id="rxjs-container">
+    <mat-card  id="operators">
+      <app-operator-menu></app-operator-menu>
+    </mat-card>
+    <img src="../assets/rxjs.png" alt="">
+  </div>
 </div>

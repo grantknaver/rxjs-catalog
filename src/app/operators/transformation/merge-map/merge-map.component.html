@@ -1,29 +1,29 @@
 <h1>MergeMap</h1>
 <div id="container">
   <div [formGroup]="mergeMapForm">
-    <div>
-      <label for="intervalNumber">Number Of Intervals</label> :
-      <input
-        formControlName="intervals"
-        type="number"
-        id="intervalNumber"
-        type="number"
-        min="1"
-        max="5"
-      />
-    </div>
+    <mat-form-field class="inputFields" appearance="fill">
+      <mat-label for="intervalNumber">Number Of Intervals</mat-label>
+      <input 
+      matInput 
+      formControlName="intervals"
+      type="number" 
+      id="intervalNumber"
+      type="number"
+      min="1"
+      max="5">
+    </mat-form-field>
     <br>
-    <div>
-      <label for="emissionsNumber">Number Of Emmissions</label> :
-      <input
-        formControlName="emissions"
-        type="number"
-        id="emissionsNumber"
-        type="number"
-        min="1"
-        max="5"
-      />
-    </div>
+    <mat-form-field class="inputFields" appearance="fill">
+      <mat-label for="emissionsNumber">Number Of Emmissions</mat-label>
+      <input 
+      matInput 
+      formControlName="emissions"
+      type="number" 
+      id="emissionsNumber"
+      type="number"
+      min="1"
+      max="5">
+    </mat-form-field>
     <br>
     <button mat-raised-button color="accent" (click)="useMergeMap()">Calculate</button>
   </div>
