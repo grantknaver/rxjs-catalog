@@ -7,8 +7,8 @@ import { NotFoundComponent } from './core/not-found/not-found.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'transformation', loadChildren: () => import('./modules/transformation/transformation.module').then(m => m.TransformationModule)  },
-  // { path: '404', component: NotFoundComponent },
-  // { path: '**', redirectTo: '/404'}
+  { path: '404', component: NotFoundComponent },
+  { path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({

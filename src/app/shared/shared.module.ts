@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
-import { EmissionsPanelComponent } from './components/emissions-panel/emissions-panel.component';
+import { IEPanelComponent } from './components/ie-panel/ie-panel.component';
 import { CodeDisplayComponent } from './components/code-display/code-display.component';
 
 
 @NgModule({
   declarations: [
-    EmissionsPanelComponent, 
+    IEPanelComponent, 
     CodeDisplayComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     CodeDisplayComponent,

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmissionsPanelComponent } from './emissions-panel.component';
+import { IEPanelComponent } from './ie-panel.component';
 
-describe('EmissionsPanelComponent', () => {
-  let component: EmissionsPanelComponent;
-  let fixture: ComponentFixture<EmissionsPanelComponent>;
+describe('IEPanelComponent', () => {
+  let component: IEPanelComponent;
+  let fixture: ComponentFixture<IEPanelComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EmissionsPanelComponent ]
+      declarations: [ IEPanelComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EmissionsPanelComponent);
+    fixture = TestBed.createComponent(IEPanelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

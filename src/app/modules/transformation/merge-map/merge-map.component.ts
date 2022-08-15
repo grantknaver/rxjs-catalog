@@ -1,8 +1,6 @@
 import {
   Component,
-  OnInit,
-  Output,
-  EventEmitter
+  OnInit
 } from '@angular/core';
 import {
   FormGroup,
@@ -26,7 +24,6 @@ import {
   styleUrls: ['./merge-map.component.scss']
 })
 export class MergeMapComponent implements OnInit {
-  @Output() componentName = new EventEmitter<string>();
   public mergeMapForm: FormGroup;
   public mergeMapOutput$: Observable<string[]>;
   tsCodeStr = TS_STRING;
@@ -75,9 +72,7 @@ export class MergeMapComponent implements OnInit {
 export const TS_STRING = `
 import {
   Component,
-  OnInit,
-  Output,
-  EventEmitter
+  OnInit
 } from '@angular/core';
 import {
   FormGroup,
@@ -101,7 +96,6 @@ import {
   styleUrls: ['./merge-map.component.scss']
 })
 export class MergeMapComponent implements OnInit {
-  @Output() componentName = new EventEmitter<string>();
   public mergeMapForm: FormGroup;
   public mergeMapOutput$: Observable<string[]>;
   
