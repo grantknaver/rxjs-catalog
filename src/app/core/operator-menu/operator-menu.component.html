@@ -44,19 +44,25 @@
   <button mat-menu-item>concatMap</button>
   <button mat-menu-item>concatMapTo</button>
   <button mat-menu-item>exhaust</button>
-  <button mat-menu-item>exhaustMap</button>
+  <button mat-menu-item>
+    <a [routerLink]="['/transformation/concatmap']" routerLinkActive="active-link">concatMap</a>
+  </button>
   <button mat-menu-item>expand</button>
   <button mat-menu-item>groupBy</button>
   <button mat-menu-item>map</button>
   <button mat-menu-item>mapTo</button>
-  <button mat-menu-item>mergeMap</button>
+  <button  mat-menu-item>
+    <a [routerLink]="['/transformation/mergmap']" routerLinkActive="active-link">mergeMap</a>
+  </button>
   <button mat-menu-item>mergeMapTo</button>
   <button mat-menu-item>MergeScan</button>
   <button mat-menu-item>pairwise</button>
   <button mat-menu-item>pluck</button>
   <button mat-menu-item>scan</button>
   <button mat-menu-item>switchScan</button>
-  <button mat-menu-item>switchMap</button>
+  <button mat-menu-item>
+    <a [routerLink]="['/transformation/switchmap']" routerLinkActive="active-link">switchMap</a>
+  </button>
   <button mat-menu-item>switchMapTo</button>
   <button mat-menu-item>window</button>
   <button mat-menu-item>windowCount</button>

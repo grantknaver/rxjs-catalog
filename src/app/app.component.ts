@@ -5,9 +5,9 @@ import {
   ChangeDetectionStrategy,
   ViewContainerRef
 } from '@angular/core';
-import { ConcatMapComponent } from './operators/transformation/concat-map/concat-map.component';
-import { MergeMapComponent } from './operators/transformation/merge-map/merge-map.component';
-import { SwitchMapComponent } from './operators/transformation/switch-map/switch-map.component';
+// import { ConcatMapComponent } from './operators/transformation/concat-map/concat-map.component';
+// import { MergeMapComponent } from './operators/transformation/merge-map/merge-map.component';
+// import { SwitchMapComponent } from './operators/transformation/switch-map/switch-map.component';
 
 @Component({
   selector: 'app-root',
@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
   public placeholder: ViewContainerRef;
 
   ngOnInit() {
-    this.placeholder.clear();
-    this.placeholder.createComponent(MergeMapComponent);
+    // this.placeholder.clear();
+    // this.placeholder.createComponent(MergeMapComponent);
   }
 
 }
