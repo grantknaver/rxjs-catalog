@@ -4,12 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { IEPanelComponent } from './components/ie-panel/ie-panel.component';
 import { CodeDisplayComponent } from './components/code-display/code-display.component';
+import { OutputDisplayComponent } from './components/output-display/output-display.component';
 
 
 @NgModule({
   declarations: [
     IEPanelComponent, 
-    CodeDisplayComponent
+    CodeDisplayComponent, 
+    OutputDisplayComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { CodeDisplayComponent } from './components/code-display/code-display.com
   ],
   exports: [
     CodeDisplayComponent,
-    MaterialModule
+    MaterialModule,
+    OutputDisplayComponent
   ]
 })
 export class SharedModule { }

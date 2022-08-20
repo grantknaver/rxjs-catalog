@@ -1,34 +1,4 @@
 #container {
     display: flex;
-    flex-direction: column;
-
-    .inputFields {
-        width: 50%;
-    }
-    
-    #output {
-        background-color: white;
-        color: black;
-    
-        ul {
-            list-style: none;
-            padding: 0;
-            padding-left: 5px;
-            margin: 0;
-        }
-
-        #noOutputText {
-            padding: 5px;
-        }
-    }
-
-    p {
-        margin: 0;
-
-        .emissions {
-            color: #69F0AE;
-            font-weight: bold;
-        }
-    }
-
+    flex-direction: column; 
 }
