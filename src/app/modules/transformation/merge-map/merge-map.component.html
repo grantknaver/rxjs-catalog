@@ -16,33 +16,7 @@
     </mat-expansion-panel>
   </mat-accordion>
   <br>
-  <div [formGroup]="mergeMapForm">
-    <mat-form-field class="inputFields" appearance="fill">
-      <mat-label for="intervalNumber">Number Of Intervals</mat-label>
-      <input 
-      matInput 
-      formControlName="intervals"
-      type="number" 
-      id="intervalNumber"
-      type="number"
-      min="1"
-      max="5">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="inputFields" appearance="fill">
-      <mat-label for="emissionsNumber">Number Of Emmissions</mat-label>
-      <input 
-      matInput 
-      formControlName="emissions"
-      type="number" 
-      id="emissionsNumber"
-      type="number"
-      min="1"
-      max="5">
-    </mat-form-field>
-    <br>
-    <button mat-raised-button color="accent" (click)="useMergeMap()">Calculate</button>
-  </div> 
+  <app-ie-panel></app-ie-panel>
   <br> 
   <app-output-display [outStr$]="mergeMapOutput$"></app-output-display>
 </div>

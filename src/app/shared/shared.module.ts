@@ -22,7 +22,8 @@ import { OutputDisplayComponent } from './components/output-display/output-displ
   exports: [
     CodeDisplayComponent,
     MaterialModule,
-    OutputDisplayComponent
+    OutputDisplayComponent,
+    IEPanelComponent,
   ]
 })
 export class SharedModule { }
