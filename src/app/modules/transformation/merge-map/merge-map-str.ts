@@ -1,10 +1,12 @@
+export const MERGEMAP_TS_STRING = `
 import {
   Component,
   OnInit
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {
-  FormGroup
+  FormGroup,
+  FormBuilder
 } from '@angular/forms';
 import { 
   interval, 
@@ -19,7 +21,6 @@ import {
 } from 'rxjs/operators';
 import { TransformationComponent } from '../transformation.component';
 import { MERGEMAP_TS_STRING } from './merge-map-str';
-
 
 
 @Component({
@@ -54,16 +55,14 @@ export class MergeMapComponent extends TransformationComponent implements OnInit
       mergeMap(intervalCounter => interval().pipe(
         take(emissionsCount),
         tap(intervalNum => {
-          output.push(`Interval: ${intervalCounter} | ${intervalNum}`);
+          output.push('Interval: ' + intervalCounter + ' | ' + intervalNum);
           if ((intervalNum + 1) == emissionsCount) {
-            output.push(`Completed Interval ${intervalCounter}`);
+            console.log('intervalCounter', intervalCounter);
+            output.push('Completed Interval ' + intervalCounter);
           }
         })
       )),
       map(() => output)
     );
   }
-}
-
-
-
+}`;

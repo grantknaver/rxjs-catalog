@@ -6,6 +6,7 @@ import { MergeMapComponent } from './merge-map/merge-map.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TransformationRoutingModule } from './transformation-routing.module';
+import { TransformationComponent } from './transformation.component';
 
 
 
@@ -13,7 +14,8 @@ import { TransformationRoutingModule } from './transformation-routing.module';
   declarations: [
     ConcatMapComponent,
     SwitchMapComponent,
-    MergeMapComponent
+    MergeMapComponent,
+    TransformationComponent
   ],
   imports: [
     CommonModule,

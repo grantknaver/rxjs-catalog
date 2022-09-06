@@ -1,0 +1,24 @@
+<div id="container" *ngIf="viewData$ | async">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                          (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2>{{title}}<Title></Title></h2>
+        </mat-panel-title>
+        <mat-panel-description>
+          Example Code
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div id="code">
+        <app-code-display [tsCode2Display]="operatorData.logic"></app-code-display>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+  <ng-container *ngIf="domExposure.iePanel">
+    <app-ie-panel (submitForm)="updateState($event)"></app-ie-panel>
+  </ng-container>
+  <br> 
+  <app-output-display [outStr$]="transformationOutput$"></app-output-display>
+</div>

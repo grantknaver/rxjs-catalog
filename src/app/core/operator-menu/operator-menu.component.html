@@ -1,3 +1,4 @@
+<button mat-button routerLink="" routerLinkActive="active-link"  [routerLinkActiveOptions]="{exact: true}">Home</button>
 <button mat-button [matMenuTriggerFor]="conditional">Conditional</button>
 <mat-menu #conditional="matMenu">
   <button mat-menu-item>defaultIfEmpty</button>
@@ -44,25 +45,19 @@
   <button mat-menu-item>concatMap</button>
   <button mat-menu-item>concatMapTo</button>
   <button mat-menu-item>exhaust</button>
-  <button mat-menu-item>
-    <a [routerLink]="['/transformation/concatmap']" routerLinkActive="active-link">concatMap</a>
-  </button>
+  <button mat-menu-item routerLink="/transformation/concatMap" routerLinkActive="active-link">concatMap</button>
   <button mat-menu-item>expand</button>
   <button mat-menu-item>groupBy</button>
   <button mat-menu-item>map</button>
   <button mat-menu-item>mapTo</button>
-  <button  mat-menu-item>
-    <a [routerLink]="['/transformation/mergmap']" routerLinkActive="active-link">mergeMap</a>
-  </button>
+  <button  mat-menu-item routerLink="/transformation/mergeMap" routerLinkActive="active-link">mergeMap</button>
   <button mat-menu-item>mergeMapTo</button>
   <button mat-menu-item>MergeScan</button>
   <button mat-menu-item>pairwise</button>
   <button mat-menu-item>pluck</button>
   <button mat-menu-item>scan</button>
-  <button mat-menu-item>switchScan</button>
-  <button mat-menu-item>
-    <a [routerLink]="['/transformation/switchmap']" routerLinkActive="active-link">switchMap</a>
-  </button>
+  <button mat-menu-item>switchScan</button> 
+  <button  mat-menu-item routerLink="/transformation/switchMap" routerLinkActive="active-link">switchMap</button>
   <button mat-menu-item>switchMapTo</button>
   <button mat-menu-item>window</button>
   <button mat-menu-item>windowCount</button>

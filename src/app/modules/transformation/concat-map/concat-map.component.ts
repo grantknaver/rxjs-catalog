@@ -35,6 +35,7 @@ export class ConcatMapComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
+    console.log('ngOnInit ConcatMapComponent');
     this.concatMapForm = this.fb.group({
       intervals: 0,
       emissions: 0,

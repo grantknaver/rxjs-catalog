@@ -5,6 +5,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './code-display.component.html',
   styleUrls: ['./code-display.component.scss']
 })
-export class CodeDisplayComponent{
+export class CodeDisplayComponent {
   @Input() public tsCode2Display = '';
 }
